@@ -1,0 +1,319 @@
+@FirstMainColor : #313030;
+@SecondMainColor : #ff3f40;
+@BgColor : #f6f2f2;
+.spacing_between_sections {
+    padding: 80px 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    color: @FirstMainColor;
+}
+
+.line {
+    height: 3px;
+    width: 100px;
+    background: @SecondMainColor;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background: @BgColor;
+    .navbar-toggler {
+        color: #ffffff;
+        border: none;
+        &:hover {
+            background: @SecondMainColor;
+        }
+    }
+    .navbar {
+        .navbar-nav {
+            .nav-link {
+                color: #ffffff;
+                &:hover {
+                    background: @SecondMainColor;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .header-title {
+        .spacing_between_sections;
+        h2 {
+            font-size: 2.5em;
+            line-height: 1.5em;
+        }
+
+        .btn {
+            background: @SecondMainColor;
+            border: 0;
+            width: 160px;
+            &:hover {
+                background: @SecondMainColor;
+            }
+        }
+        &:last-child {
+            img {
+                box-shadow: 0px 0px 100px rgba(0, 0, 0, .4);
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .header-title {
+            h2 {
+                padding-top: 40px;
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+main {
+    .services {
+        .spacing_between_sections;
+        border-bottom: 2px solid #ececec;
+        &:first-child {
+            p {
+                padding: 30px 0;
+                font-size: 0.9em;
+            }
+            .btn {
+                background: none;
+                color: @SecondMainColor;
+                width: 160px;
+                border: 1.5px solid @SecondMainColor;
+            }
+        }
+        &:last-child {
+            h5 {
+                padding-top: 10px;
+            }
+            p {
+                padding: 10px 0;
+            }
+            .fa-cog,
+            .fa-pencil-alt,
+            .fa-gem,
+            .fa-truck {
+                color: @SecondMainColor;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .services {
+            .box {
+                &:last-child {
+                    padding-top: 50px;
+                }
+            }
+        }
+    }
+
+    .products {
+        &:first-child {
+            p {
+                padding: 15px 0;
+                font-size: 0.85em;
+                max-width: 500px;
+                text-align: center;
+            }
+        }
+        ul {
+            li {
+                .nav-link {
+                    color: @FirstMainColor;
+                }
+                .active {
+                    color: @SecondMainColor;
+                }
+            }
+        }
+        .item {
+            height: 250px;
+            border: 5px solid white;
+        }
+        .item-1 {
+            background: url(images/product.jpeg) no-repeat center center;
+            background-size: cover;
+        }
+        .item-2 {
+            background: url(images/product.jpeg) no-repeat center center;
+            background-size: cover;
+        }
+        .item-3 {
+            background: url(images/product.jpeg) no-repeat center center;
+            background-size: cover;
+        }
+        .item-4 {
+            background: url(images/product.jpeg) no-repeat center center;
+            background-size: cover;
+        }
+        .item-5 {
+            background: url(images/product.jpeg) no-repeat center center;
+            background-size: cover;
+        }
+        .item-6 {
+            background: url(images/product.jpeg) no-repeat center center;
+            background-size: cover;
+        }
+        .item-7 {
+            background: url(images/product.jpeg) no-repeat center center;
+            background-size: cover;
+        }
+        .item-8 {
+            background: url(images/product.jpeg) no-repeat center center;
+            background-size: cover;
+        }
+    }
+    .our-team {
+        .title {
+            p {
+                font-size: 0.85em;
+            }
+        }
+        .members {
+            .active-member {
+                height: 350px;
+                background: url(images/member.jpeg) no-repeat center center;
+                background-size: cover;
+            }
+            .info-member {
+                height: 100%;
+                .about-member {
+                    height: 200px;
+                    p {
+                        font-size: 0.85em;
+                    }
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        max-width: 350px;
+                        li {
+                            a {
+                                color: @FirstMainColor;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .photos-members {
+                    height: 150px;
+                    width: 100%;
+                    .photo {
+                        background: url(images/member.jpeg) no-repeat center center;
+                        background-size: cover;
+                        border: 5px solid #fff;
+                        .name {
+                            display: none;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            background: rgba(0, 0, 0, .5);
+                            width: 100%;
+                            text-align: center;
+                            h5 {
+                                color: #fff;
+                                font-size: 0.9em;
+
+                            }
+                        }
+                        &:hover {
+                            .name {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .subscribe {
+        height: 350px;
+        background: url(images/subscribe.jpeg) no-repeat center center;
+        background-size: cover;
+        .black {
+            position: relative;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .7);
+            .title {
+                height: 100%;
+                position: absolute;
+                z-index: 4;
+                top: 0;
+                left: 0;
+                h3 {
+                    color: #fff;
+                }
+                p {
+                    color: #fff;
+                    font-size: 0.85em;
+                }
+                form {
+                    .e-mail {
+                        min-width: 280px;
+                        font-size: 0.85em;
+                    }
+                    .btn {
+                        background: @SecondMainColor;
+                        color: #fff;
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        form {
+            input,
+            textarea {
+                width: 100%;
+                padding: 15px 20px 15px 30px;
+                background: #e5e5e5;
+                border: none;
+                border-radius: 10px;
+                color: @FirstMainColor;
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 5px rgba(255, 59, 59, .9);
+                }
+            }
+            button {
+                width: 100%;
+                background: @SecondMainColor;
+                border: none;
+                padding: 20px 0;
+                color: #fff;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+footer {
+    background: @FirstMainColor;
+    .copyright {
+        p {
+            color: #b8b8b8;
+            font-size: 0.9em;
+        }
+    }
+    .social {
+        .fa-twitter-square,
+        .fa-google-plus-square,
+        .fa-facebook-square {
+            color: #fff;
+            font-size: 1.8em;
+        }
+    }
+}

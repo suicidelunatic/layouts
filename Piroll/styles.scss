@@ -1,0 +1,142 @@
+$BgColor: #f6f6f6;
+$BgFooterColor: #141414;
+$BgBoxColorFirst: #bbbbbb;
+$BgBoxColorSecond: #dddddd;
+$MainColor: #21bfb9;
+$TextMainColor: #171717;
+$TextOtherColor: #808080;
+$TextFooterColor : #bcbcbc;
+$SizeP: 0.85rem;
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: $BgColor;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+header {
+    background: #fff;
+    .header {
+        .navbar {
+            .navbar-toggler {
+                border: none;
+                &:hover {
+                    background: $MainColor;
+                }
+            }
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        color: $TextMainColor;
+                        font-size: 0.85rem;
+                    }
+                    &:hover {
+                        .nav-link {
+                            color: $MainColor;
+                        }
+                    }
+                }
+                .active {
+                    .nav-link {
+                        color: $MainColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    &:hover {
+                        background: $MainColor;
+                        .nav-link {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main.home {
+    .design-title {
+        height: 250px;
+        p {
+            color: $TextOtherColor;
+            font-size: $SizeP;
+            max-width: 400px;
+        }
+    }
+    .design-gallery {
+        .item {
+            height: 250px;
+            position: relative;
+            z-index: 1;
+            &:nth-of-type(odd) {
+                background: $BgBoxColorFirst;
+            }
+            &:nth-of-type(even) {
+                background: $BgBoxColorSecond;
+            }
+            img {
+                max-width: 200px;
+                max-height: 200px;
+            }
+            .hover-block {
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 250px;
+                background: $MainColor;
+                z-index: 2;
+                a {
+                    width: 100%;
+                    height: 250px;
+                }
+                h3 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+footer {
+    background: $BgFooterColor;
+    h5 {
+        color: #fff;
+    }
+    p {
+        color: $TextFooterColor;
+        font-size: $SizeP;
+    }
+    a {
+        color: $TextFooterColor;
+        &:hover {
+            color: $TextOtherColor;
+        }
+    }
+}
