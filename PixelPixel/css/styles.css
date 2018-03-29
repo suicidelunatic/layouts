@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box; }
+
+p {
+  color: #4a4d4e;
+  line-height: 2rem; }
+
+h* {
+  color: #020102; }
+
+h2 {
+  font-size: 2.5rem; }
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2rem; } }
+a:hover {
+  text-decoration: none; }
+
+body {
+  background: #f5f5f5;
+  font-family: 'Roboto', sans-serif; }
+
+.container-fluid {
+  max-width: 1750px; }
+
+.button-link {
+  color: #fff;
+  background: #f3379d;
+  max-width: 300px;
+  border-bottom: 3px solid #b12873;
+  border-radius: 5px; }
+  .button-link:hover {
+    color: #fff; }
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.how-it-works {
+  padding-bottom: 0; }
+
+header {
+  background: #f1f4f6; }
+  header .navbar .navbar-nav .nav-item {
+    border: 1px solid #f1f4f6;
+    border-radius: 5px;
+    transition: 0.5s; }
+    header .navbar .navbar-nav .nav-item .nav-link {
+      color: #020102; }
+    header .navbar .navbar-nav .nav-item:hover {
+      border: 1px solid #020102; }
+  header .navbar .navbar-nav .nav-item.active {
+    border: 1px solid #4a4d4e;
+    border-radius: 5px; }
+
+main .convention {
+  margin-top: 80px; }
+  main .convention h2 {
+    max-width: 380px; }
+  main .convention p {
+    max-width: 700px; }
+  main .convention .box img {
+    max-height: 500px; }
+  main .convention .box .app {
+    width: 180px; }
+  main .convention a.button-link {
+    max-width: 300px; }
+main .how-it-works {
+  background: #fff; }
+  main .how-it-works .box:first-child {
+    background: url(../images/howitworks-bg.png) no-repeat center 80px;
+    background-size: cover;
+    min-height: 400px; }
+  main .how-it-works .box:last-child {
+    margin-bottom: 80px; }
+    main .how-it-works .box:last-child a.button-link {
+      width: 200px; }
+    main .how-it-works .box:last-child img {
+      max-height: 500px; }
+main .leader {
+  background: #01b5e6; }
+  main .leader h2,
+  main .leader p {
+    color: #fff; }
+  main .leader h2 {
+    max-width: 400px; }
+  main .leader p {
+    max-width: 700px; }
+  main .leader .box:first-child a,
+  main .leader .box:first-child a:hover {
+    color: #f2f8b0;
+    text-decoration: underline; }
+
+footer {
+  background: #fff; }
+  footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem; }

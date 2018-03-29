@@ -1,0 +1,159 @@
+$HeaderBgColor: #f1f4f6;
+$BodyBgColor: #f5f5f5;
+$HowItWorksBgColor: #fff;
+$ButtonBgColor: #f3379d;
+$ButtonBorderColor: #b12873;
+$TextTitleColor: #020102;
+$TextColor: #4a4d4e;
+$LeaderBgColor: #01b5e6;
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    color: $TextColor;
+    line-height: 2rem;
+}
+
+h* {
+    color: $TextTitleColor;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+body {
+    background: $BodyBgColor;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+    max-width: 1750px;
+}
+
+.button-link {
+    color: #fff;
+    background: $ButtonBgColor;
+    max-width: 300px;
+    border-bottom: 3px solid $ButtonBorderColor;
+    border-radius: 5px;
+    &:hover {
+        color: #fff;
+    }
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.how-it-works {
+    padding-bottom: 0;
+}
+
+header {
+    background: $HeaderBgColor;
+    .navbar {
+        .navbar-nav {
+            .nav-item {
+                border: 1px solid $HeaderBgColor;
+                border-radius: 5px;
+                transition: 0.5s;
+                .nav-link {
+                    color: $TextTitleColor;
+                }
+                &:hover {
+                    border: 1px solid $TextTitleColor;
+                }
+            }
+            .nav-item.active {
+                border: 1px solid $TextColor;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+main {
+    .convention {
+        margin-top: 80px;
+        h2 {
+            max-width: 380px;
+        }
+        p {
+            max-width: 700px;
+        }
+        .box {
+            img {
+                max-height: 500px;
+            }
+            .app {
+                width: 180px;
+            }
+        }
+        a.button-link {
+            max-width: 300px;
+        }
+    }
+    .how-it-works {
+        background: #fff;
+        .box:first-child {
+            background: url(../images/howitworks-bg.png) no-repeat center 80px;
+            background-size: cover;
+            min-height: 400px;
+        }
+        .box:last-child {
+            a.button-link {
+                width: 200px;
+            }
+            margin-bottom: 80px;
+            img {
+                max-height: 500px;
+            }
+        }
+    }
+    .leader {
+        background: $LeaderBgColor;
+        h2,
+        p {
+            color: #fff;
+        }
+        h2 {
+            max-width: 400px;
+        }
+        p {
+            max-width: 700px;
+        }
+        .box:first-child {
+            a,
+            a:hover {
+                color: #f2f8b0;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+footer {
+    background: #fff;
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.9rem;
+    }
+}
