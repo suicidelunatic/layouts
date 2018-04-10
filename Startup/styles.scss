@@ -1,0 +1,344 @@
+$MainColor: #c0301c;
+$BgColor: #f8f8f8;
+$TextColor: #555555;
+$WidthLink: 180px;
+
+.sectionP {
+    color: $TextColor;
+    font-size: 0.9rem;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: $TextColor;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button:focus {
+    outline: none;
+    border: none;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.line,
+.line-white {
+    height: 2px;
+    width: 100px;
+    background: $TextColor;
+}
+
+.line-white {
+    background: #fff;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    .bg-black {
+        position: absolute;
+        z-index: 2;
+        background: rgba(0, 0, 0, .3);
+        height: 100%;
+        width: 100%;
+    }
+    .container {
+        position: relative;
+        height: 100%;
+        z-index: 4;
+        .header {
+            .logo {
+                a {
+                    color: #fff;
+                }
+            }
+            .navbar {
+                .navbar-toggler {
+                    border: none;
+                    border-radius: 0;
+                    &:hover {
+                        background: rgba(192, 48, 28, .5);
+                    }
+                }
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .home {
+            flex-grow: 0.6;
+            color: #fff;
+            h2 {
+                font-size: 2.7rem;
+            }
+            a {
+                color: #fff;
+                border: 2px solid #fff;
+                width: $WidthLink;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .navbar-nav {
+            .nav-item {
+                &:hover {
+                    background: rgba(192, 48, 28, .5);
+                }
+            }
+        }
+    }
+    @media screen and (max-height: 650px) {
+        height: 650px;
+    }
+}
+
+main {
+    .service-title {
+        p {
+            @extend .sectionP
+        }
+    }
+    .services {
+        .item-1,
+        .item-2,
+        .item-3 {
+            a {
+                display: block;
+                height: 100px;
+                width: 100px;
+                border-radius: 50px;
+                background-size: 40% 40%;
+                border: 2px solid #dfdfdf;
+                transition: 0.4s;
+            }
+            p {
+                font-size: 0.85rem;
+                color: $TextColor;
+            }
+        }
+        .item-1 {
+            a {
+                background: url(../images/service-1.png) no-repeat center center;
+                &:hover {
+                    background: url(../images/service-1-hover.png) no-repeat center center, $MainColor;
+                }
+            }
+        }
+        .item-2 {
+            a {
+                background: url(../images/service-2.png) no-repeat center center;
+                &:hover {
+                    background: url(../images/service-2-hover.png) no-repeat center center, $MainColor;
+                }
+            }
+        }
+        .item-3 {
+            a {
+                background: url(../images/service-3.png) no-repeat center center;
+                &:hover {
+                    background: url(../images/service-3-hover.png) no-repeat center center, $MainColor;
+                }
+            }
+        }
+    }
+    .bg-about {
+        background: $BgColor;
+        .title,
+        .decribtion {
+            p {
+                @extend .sectionP;
+            }
+        }
+        .carousel {
+            .carousel-control-prev,
+            .carousel-control-next {
+                height: 30px;
+                width: 30px;
+                margin: auto 0;
+                background: $TextColor;
+                &:hover {
+                    background: $MainColor;
+                }
+            }
+            .carousel-control-prev {
+                margin-left: 8px;
+            }
+            .carousel-control-next {
+                margin-right: 8px;
+            }
+            .first-row,
+            .second-row {
+                .member {
+                    position: relative;
+                    height: 230px;
+                    background-size: cover;
+                    border: 8px solid $BgColor;
+                    .member-info {
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, .2);
+                        top: 0;
+                        left: 0px;
+                        color: $BgColor;
+                        .social {
+                            a {
+                                color: #fff;
+                                &:hover {
+                                    background: $MainColor;
+                                }
+                            }
+                        }
+                    }
+                }
+                .member-1 {
+                    background: url(../images/member-1.png) no-repeat 40% 20%;
+                }
+                .member-2 {
+                    background: url(../images/member-2.png) no-repeat 40% 20%;
+                }
+                .member-3 {
+                    background: url(../images/member-3.png) no-repeat 40% 20%;
+                }
+                .member-4 {
+                    background: url(../images/member-4.png) no-repeat 40% 20%;
+                }
+            }
+        }
+    }
+    .works {
+        .title {
+            .active {
+                color: $MainColor;
+            }
+        }
+        .gallery {
+            .item {
+                height: 250px;
+                border: 10px solid #fff;
+                position: relative;
+                .hover-bl {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(192, 48, 28, .5);
+                    color: #fff;
+                    p {
+                        font-size: 0.8rem;
+                    }
+                    a {
+                        background: #fff;
+                        font-size: 0.9rem;
+                        color: $MainColor;
+                    }
+                }
+            }
+            .item-1 {
+                background: url(../images/work-1.png) no-repeat center center;
+                background-size: cover;
+            }
+            .item-2 {
+                background: url(../images/work-2.png) no-repeat center center;
+                background-size: cover;
+            }
+            .item-3 {
+                background: url(../images/work-3.png) no-repeat center center;
+                background-size: cover;
+            }
+            .item-4 {
+                background: url(../images/work-4.png) no-repeat center center;
+                background-size: cover;
+            }
+            .item-5 {
+                background: url(../images/work-5.png) no-repeat center center;
+                background-size: cover;
+            }
+            .item-6 {
+                background: url(../images/work-6.png) no-repeat center center;
+                background-size: cover;
+            }
+            .item-7 {
+                background: url(../images/work-7.png) no-repeat center center;
+                background-size: cover;
+            }
+            .item-8 {
+                background: url(../images/work-8.png) no-repeat center center;
+                background-size: cover;
+            }
+            .item-9 {
+                background: url(../images/work-9.png) no-repeat center center;
+                background-size: cover;
+            }
+        }
+    }
+    .blog {
+        .title {
+            p {
+                @extend .sectionP;
+            }
+        }
+        .post {
+            margin-top: 40px;
+            .img-box {
+                max-height: 100%;
+            }
+            .img-box.post-1 {
+                background: url(../images/post-1.png) no-repeat center center;
+                background-size: cover;
+            }
+            .img-box.post-2 {
+                background: url(../images/post-2.png) no-repeat center center;
+                background-size: cover;
+            }
+            .post-box {
+                .date {
+                    h4 {
+                        border: 2px solid $TextColor;
+                    }
+                }
+                .post-text {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .blog {
+            .post {
+                .img-box {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: $MainColor;
+    width: 100%;
+    height: 200px;
+    p {
+        color: #fff;
+        font-size: 0.9rem;
+    }
+    .social {
+        width: 170px;
+    }
+}

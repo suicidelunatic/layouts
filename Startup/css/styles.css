@@ -1,0 +1,221 @@
+.sectionP, main .service-title p, main .bg-about .title p,
+main .bg-about .decribtion p, main .blog .title p {
+  color: #555555;
+  font-size: 0.9rem; }
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #555555; }
+
+* {
+  box-sizing: border-box; }
+
+button:focus {
+  outline: none;
+  border: none; }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.line,
+.line-white {
+  height: 2px;
+  width: 100px;
+  background: #555555; }
+
+.line-white {
+  background: #fff; }
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/bg.png) no-repeat center center;
+  background-size: cover;
+  position: relative; }
+  header .bg-black {
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%; }
+  header .container {
+    position: relative;
+    height: 100%;
+    z-index: 4; }
+    header .container .header .logo a {
+      color: #fff; }
+    header .container .header .navbar .navbar-toggler {
+      border: none;
+      border-radius: 0; }
+      header .container .header .navbar .navbar-toggler:hover {
+        background: rgba(192, 48, 28, 0.5); }
+    header .container .header .navbar .navbar-nav .nav-item .nav-link {
+      color: #fff; }
+    header .container .home {
+      flex-grow: 0.6;
+      color: #fff; }
+      header .container .home h2 {
+        font-size: 2.7rem; }
+      header .container .home a {
+        color: #fff;
+        border: 2px solid #fff;
+        width: 180px; }
+  @media screen and (max-width: 768px) {
+    header .navbar-nav .nav-item:hover {
+      background: rgba(192, 48, 28, 0.5); } }
+  @media screen and (max-height: 650px) {
+    header {
+      height: 650px; } }
+
+main .services .item-1 a,
+main .services .item-2 a,
+main .services .item-3 a {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-size: 40% 40%;
+  border: 2px solid #dfdfdf;
+  transition: 0.4s; }
+main .services .item-1 p,
+main .services .item-2 p,
+main .services .item-3 p {
+  font-size: 0.85rem;
+  color: #555555; }
+main .services .item-1 a {
+  background: url(../images/service-1.png) no-repeat center center; }
+  main .services .item-1 a:hover {
+    background: url(../images/service-1-hover.png) no-repeat center center, #c0301c; }
+main .services .item-2 a {
+  background: url(../images/service-2.png) no-repeat center center; }
+  main .services .item-2 a:hover {
+    background: url(../images/service-2-hover.png) no-repeat center center, #c0301c; }
+main .services .item-3 a {
+  background: url(../images/service-3.png) no-repeat center center; }
+  main .services .item-3 a:hover {
+    background: url(../images/service-3-hover.png) no-repeat center center, #c0301c; }
+main .bg-about {
+  background: #f8f8f8; }
+  main .bg-about .carousel .carousel-control-prev,
+  main .bg-about .carousel .carousel-control-next {
+    height: 30px;
+    width: 30px;
+    margin: auto 0;
+    background: #555555; }
+    main .bg-about .carousel .carousel-control-prev:hover,
+    main .bg-about .carousel .carousel-control-next:hover {
+      background: #c0301c; }
+  main .bg-about .carousel .carousel-control-prev {
+    margin-left: 8px; }
+  main .bg-about .carousel .carousel-control-next {
+    margin-right: 8px; }
+  main .bg-about .carousel .first-row .member,
+  main .bg-about .carousel .second-row .member {
+    position: relative;
+    height: 230px;
+    background-size: cover;
+    border: 8px solid #f8f8f8; }
+    main .bg-about .carousel .first-row .member .member-info,
+    main .bg-about .carousel .second-row .member .member-info {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      top: 0;
+      left: 0px;
+      color: #f8f8f8; }
+      main .bg-about .carousel .first-row .member .member-info .social a,
+      main .bg-about .carousel .second-row .member .member-info .social a {
+        color: #fff; }
+        main .bg-about .carousel .first-row .member .member-info .social a:hover,
+        main .bg-about .carousel .second-row .member .member-info .social a:hover {
+          background: #c0301c; }
+  main .bg-about .carousel .first-row .member-1,
+  main .bg-about .carousel .second-row .member-1 {
+    background: url(../images/member-1.png) no-repeat 40% 20%; }
+  main .bg-about .carousel .first-row .member-2,
+  main .bg-about .carousel .second-row .member-2 {
+    background: url(../images/member-2.png) no-repeat 40% 20%; }
+  main .bg-about .carousel .first-row .member-3,
+  main .bg-about .carousel .second-row .member-3 {
+    background: url(../images/member-3.png) no-repeat 40% 20%; }
+  main .bg-about .carousel .first-row .member-4,
+  main .bg-about .carousel .second-row .member-4 {
+    background: url(../images/member-4.png) no-repeat 40% 20%; }
+main .works .title .active {
+  color: #c0301c; }
+main .works .gallery .item {
+  height: 250px;
+  border: 10px solid #fff;
+  position: relative; }
+  main .works .gallery .item .hover-bl {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(192, 48, 28, 0.5);
+    color: #fff; }
+    main .works .gallery .item .hover-bl p {
+      font-size: 0.8rem; }
+    main .works .gallery .item .hover-bl a {
+      background: #fff;
+      font-size: 0.9rem;
+      color: #c0301c; }
+main .works .gallery .item-1 {
+  background: url(../images/work-1.png) no-repeat center center;
+  background-size: cover; }
+main .works .gallery .item-2 {
+  background: url(../images/work-2.png) no-repeat center center;
+  background-size: cover; }
+main .works .gallery .item-3 {
+  background: url(../images/work-3.png) no-repeat center center;
+  background-size: cover; }
+main .works .gallery .item-4 {
+  background: url(../images/work-4.png) no-repeat center center;
+  background-size: cover; }
+main .works .gallery .item-5 {
+  background: url(../images/work-5.png) no-repeat center center;
+  background-size: cover; }
+main .works .gallery .item-6 {
+  background: url(../images/work-6.png) no-repeat center center;
+  background-size: cover; }
+main .works .gallery .item-7 {
+  background: url(../images/work-7.png) no-repeat center center;
+  background-size: cover; }
+main .works .gallery .item-8 {
+  background: url(../images/work-8.png) no-repeat center center;
+  background-size: cover; }
+main .works .gallery .item-9 {
+  background: url(../images/work-9.png) no-repeat center center;
+  background-size: cover; }
+main .blog .post {
+  margin-top: 40px; }
+  main .blog .post .img-box {
+    max-height: 100%; }
+  main .blog .post .img-box.post-1 {
+    background: url(../images/post-1.png) no-repeat center center;
+    background-size: cover; }
+  main .blog .post .img-box.post-2 {
+    background: url(../images/post-2.png) no-repeat center center;
+    background-size: cover; }
+  main .blog .post .post-box .date h4 {
+    border: 2px solid #555555; }
+  main .blog .post .post-box .post-text {
+    font-size: 0.9rem; }
+@media screen and (max-width: 768px) {
+  main .blog .post .img-box {
+    height: 250px; } }
+
+footer {
+  background: #c0301c;
+  width: 100%;
+  height: 200px; }
+  footer p {
+    color: #fff;
+    font-size: 0.9rem; }
+  footer .social {
+    width: 170px; }
